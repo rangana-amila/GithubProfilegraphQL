@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GitHub Profile GraphQL</string>
+    <string name="text_profile">Profile</string>
+    <string name="text_followers">Followers</string>
+    <string name="text_followings">Followings</string>
+    <string name="text_view_all">View all</string>
+    <string name="text_starred_repositories">Starred Repositories</string>
+    <string name="text_top_repositories">Top Repositories</string>
+</resources>

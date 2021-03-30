@@ -1,0 +1,71 @@
+query FindQuery($owner:String!,$name:String!){
+  repository(owner:$owner, name:$name) {
+    name
+    description
+    forkCount
+    url
+  }
+}
+
+query GetUser{
+  user(login : "stubailo") {
+      name
+      login
+      avatarUrl
+      email
+      following{
+        totalCount
+      }
+      followers{
+        totalCount
+      }
+}
+}
+
+#query GetPinnedRepositories{
+#  user(login : "stubailo") {
+#    pinnedItems(first: 3, types: REPOSITORY) {
+#
+#      nodes {
+#        ... on Repository {
+#          name
+#          description
+#        }
+#      }
+#    }
+#  }
+#}
+
+query GetTopRepositories{
+  user(login : "stubailo") {
+    topRepositories(first: 10, orderBy: {direction: ASC, field: NAME}){
+      edges{
+        node{
+          name
+          description
+          owner{
+            login
+            avatarUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query GetStarredRepositories{
+  user(login : "stubailo") {
+    starredRepositories(first: 10){
+      edges{
+        node{
+          name
+          description
+          owner{
+            avatarUrl
+            login
+          }
+        }
+      }
+    }
+  }
+}

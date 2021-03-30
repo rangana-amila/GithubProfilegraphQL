@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_size_title">18sp</dimen>
+    <dimen name="font_size_name">28sp</dimen>
+    <dimen name="font_size_login">14sp</dimen>
+    <dimen name="font_size_list_titles">24sp</dimen>
+</resources>
